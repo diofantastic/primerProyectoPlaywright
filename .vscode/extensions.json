@@ -1,0 +1,6 @@
+{
+    "recommendations": [
+        "mskelton.playwright-test-snippets",
+        "ms-playwright.playwright"
+    ]
+}
