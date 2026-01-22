@@ -1,4 +1,5 @@
 import { test, expect, Page } from '@playwright/test';
+import { sandBoxPage } from './Pages/sandboxPage';
 
 test.describe('aserciones', () => {
     /////BEFORE EACH
@@ -119,4 +120,16 @@ test.describe('aserciones', () => {
         })
     
     */
+
+    test('09 - Page Object Model', async ({ page }) => {
+        const sandbox = new sandBoxPage(page)
+
+        await sandbox.checkPasta()
+
+        await expect(sandbox.pastaCheckbox, 'El checkbox no está seleccionado').not.toBeChecked()
+        //comentado
+        //.toBeChecked()
+    })
+
+
 })
